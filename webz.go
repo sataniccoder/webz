@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"os"
 	"webz/core/get"
+	"webz/core/list"
 )
 
 var wd string
@@ -31,6 +32,11 @@ func arg_parser(args []string) {
 			port = args[num+1]
 		} else if data == "-h" {
 			help_menu()
+		} else if data == "--silent" {
+			silent = true
+		} else {
+			fmt.Println("[error] no such argument know '" + data + "' please use '-h' to see help menu")
+			os.Exit(0)
 		}
 	}
 }
@@ -61,7 +67,7 @@ func main() {
 	silent = false
 
 	// arg handler
-	arg_parser(os.Args)
+	arg_parser(os.Args[1:])
 	fmt.Println(`
 ==================== [ GO-WEB ] ====================
             [+] a simple HTTP server [+] 
@@ -78,9 +84,15 @@ LIST   : `, list_mode, `
 
 	if !list_mode {
 		// config for get module
-		get.Set_wd(wd)
+		get.Set_config(wd, silent)
 
+		// start get module
 		http.HandleFunc("/", get.Get_handle)
+		http.ListenAndServe(":"+port, nil)
+	} else {
+		list.Set_config(wd, silent)
+
+		http.HandleFunc("/", list.List_handle)
 		http.ListenAndServe(":"+port, nil)
 	}
 }
