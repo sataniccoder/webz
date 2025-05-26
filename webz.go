@@ -1,6 +1,5 @@
-// version 0.1
 package main
-
+// version 0.1
 import (
 	"fmt"
 	"net/http"
