@@ -26,9 +26,17 @@ the second mode is called 'list' mode wich allows client's to view files and rea
 added the '--list' mode along with a '--silent' arg for no output
 
 #### Next Update's
-1) self updates if checked
+1) check if new version
 2) logging system
-3) support for HTTPS via cert's
+3) support for password to view site
+
+### Roadmap
+v0.1 - new version check, logging, password protection
+v0.2 - HTTPS support (using self-singed certs) along with static config files
+v0.3 - add a compiled version along with an install script
+v0.4 - allow to be run as a service to go along with the static config
+v0.5 - self upgrade or manual if client want's it (will only grab the compiled binary not source code)
+
 
 #### other
 rember webz is ment to be small and fast so as time goes on and if the project expands more it might need two dirrent versions, one 'slim' and another 'expaned' version   
