@@ -35,11 +35,12 @@ the second mode is called 'list' mode wich allows client's to view files and rea
 
 ### Roadmap
 - [X] v0.2 - new version check, logging, password protection
-- [ ] v0.3 - HTTPS support (using self-singed certs) along with static config files
-- [ ] v0.4 - add a compiled version along with an install script
-- [ ] v0.5 - allow to be run as a service to go along with the static config
-- [ ] v0.6 - self upgrade or manual if client want's it (will only grab the compiled binary not source code)
+- [ ] v0.3 - install command along with static config files
+- [ ] v0.4 - allow to be run as a service to go along with the static config and have a compiled release verison
+- [ ] v0.5 - self upgrade or manual if client want's it (will only grab the compiled binary not source code)
 
 
 #### other
 rember webz is ment to be small and fast so as time goes on and if the project expands more it might need two dirrent versions, one 'slim' and another 'expaned' version   
+this is also the reason why anything that would normaly be a script (EG: v0.3 in the roadmap having the install script) will be built into the program allowing for you to just   
+download a single file and be able to do everythign you need/want too do with the program
