@@ -6,7 +6,7 @@ It is designed to handle multiple clients efficiently, while requiring minimal s
 webz aims to be as small and straightforward as possible, making it ideal for quick file hosting and static site serving.
 
 Current version: **0.2**  
-See the [Roadmap](##Roadmap) section for planned and implemented features.
+See the Roadmap section for planned and implemented features.
 
 ---
 
@@ -38,20 +38,22 @@ This will produce the `webz` executable binary.
 
 - **Default mode:** Serves a primary HTML file. Requires an `index.html` file in the directory where webz runs or in the specified folder.
 - **List mode (`--list`):** Allows clients to browse files and directories via a web interface, view files in the browser, and download them directly.
+- **Setup (`--setup`)**: installs the program as a service and sets up a config file
 
 ---
 
 ## Recent updates
 
-- Added `--list` mode for directory browsing.
-- Added `--silent` option to suppress output logs.
+- Added version checking to let you know if theres a new version out
+- Added a logging system
+- Added password protection for the site (if user want's it)
 
 ---
 
 ## Roadmap
 
 - [X] **v0.2** — Version checking, logging, password protection.
-- [ ] **v0.3** — HTTPS support with self-signed certificates and static configuration files.
+- [ ] **v0.3** — Static config file along with been able to use it as a service with a `--setup` mode
 - [ ] **v0.4** — Provide a compiled release version and an installation script.
 - [ ] **v0.5** — Ability to run as a service for long-term hosting with static configs.
 - [ ] **v0.6** — Self-upgrade functionality (automatic or manual updates for the compiled binary).
@@ -59,12 +61,6 @@ This will produce the `webz` executable binary.
 ---
 
 ## Notes
-
-webz is designed to remain small and fast. If the project grows significantly, there may be two versions in the future:
-
-- A **slim** version for minimal resource usage.
-- An **expanded** version with additional features.
-
----
-
-If you have any questions, feature requests, or issues, feel free to open an issue or reach out!
+This project is desinged to be as easy whilst having the smallest setup time possable due to this desing philiopshy of the project   
+all fetures and things that might be tradationaly be added as a .py or bash script too the project (EG: automated setup) will be built into the program and only accsesed when you specify   
+for example the `--list` function won't have any accsess too the `--setup` function
