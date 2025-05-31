@@ -1,46 +1,70 @@
 # webz
-webz is a simple website runner i built in golang, it's desinged to be small and fast handling mulitple client's whilst you just have to run the program    
-it's desing'd to be as simple as possible and as small as possible   
 
-webz is currently on version 0.2, see the roadmap seciton to see what fetures it has
+**webz** is a lightweight, fast, and simple website server written in Go.  
+It is designed to handle multiple clients efficiently, while requiring minimal setup — just run the program and start serving.
 
-## Install
-to install webz you can either go to the realses or download and compile from source   
-###### Source
+webz aims to be as small and straightforward as possible, making it ideal for quick file hosting and static site serving.
 
-```
+Current version: **0.2**  
+See the [Roadmap](##Roadmap) section for planned and implemented features.
+
+---
+
+## Installation
+
+You can install **webz** either by downloading a pre-compiled binary from the [releases](https://github.com/sataniccoder/webz/releases) page or by building from source.
+
+### Build from source
+
+```bash
 git clone https://github.com/sataniccoder/webz.git
 cd webz
 go build webz.go
 ```
-once that's done you will have the compiled binary for webz
 
-### Feturs
-1) simple file hosting allowing other to view or download them with a simple command-line argument
-2) allows for live edit's so once you have set webz up with the options you wan't you can leave it alone
-3) auto-update webz can auto-update it's self and restart the program with your curren't config (if nothings changed within the config)
+This will produce the `webz` executable binary.
 
+---
 
-#### Modes
-webz has two modes, the defualt mode allows users to view primalry html files, this mode requires there be a index.hmlt in the directory you have selecte or where you run the program from    
-the second mode is called 'list' mode wich allows client's to view files and read them in the browser and allowing users to download them onto there mechined
+## Features
 
-#### Recent update
-. Version checking   
-. logging system   
-. password protection for the site (if you want it on)   
+1. **Simple file hosting** — easily share files and folders over HTTP using command-line arguments.
+2. **Live editing** — make changes to your files, and webz will serve updates automatically without needing a restart.
+3. **Auto-update** — webz can check for updates and update itself while preserving your current configuration.
 
-#### Next Update's
+---
 
+## Modes
 
-### Roadmap
-- [X] v0.2 - new version check, logging, password protection
-- [ ] v0.3 - install command along with static config files
-- [ ] v0.4 - allow to be run as a service to go along with the static config and have a compiled release verison
-- [ ] v0.5 - self upgrade or manual if client want's it (will only grab the compiled binary not source code)
+- **Default mode:** Serves a primary HTML file. Requires an `index.html` file in the directory where webz runs or in the specified folder.
+- **List mode (`--list`):** Allows clients to browse files and directories via a web interface, view files in the browser, and download them directly.
 
+---
 
-#### other
-rember webz is ment to be small and fast so as time goes on and if the project expands more it might need two dirrent versions, one 'slim' and another 'expaned' version   
-this is also the reason why anything that would normaly be a script (EG: v0.3 in the roadmap having the install script) will be built into the program allowing for you to just   
-download a single file and be able to do everythign you need/want too do with the program
+## Recent updates
+
+- Added `--list` mode for directory browsing.
+- Added `--silent` option to suppress output logs.
+
+---
+
+## Roadmap
+
+- [X] **v0.2** — Version checking, logging, password protection.
+- [ ] **v0.3** — HTTPS support with self-signed certificates and static configuration files.
+- [ ] **v0.4** — Provide a compiled release version and an installation script.
+- [ ] **v0.5** — Ability to run as a service for long-term hosting with static configs.
+- [ ] **v0.6** — Self-upgrade functionality (automatic or manual updates for the compiled binary).
+
+---
+
+## Notes
+
+webz is designed to remain small and fast. If the project grows significantly, there may be two versions in the future:
+
+- A **slim** version for minimal resource usage.
+- An **expanded** version with additional features.
+
+---
+
+If you have any questions, feature requests, or issues, feel free to open an issue or reach out!
