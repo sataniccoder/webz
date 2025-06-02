@@ -62,5 +62,4 @@ This will produce the `webz` executable binary.
 
 ## Notes
 This project is desinged to be as easy whilst having the smallest setup time possable due to this desing philiopshy of the project   
-all fetures and things that might be tradationaly be added as a .py or bash script too the project (EG: automated setup) will be built into the program and only accsesed when you specify   
-for example the `--list` function won't have any accsess too the `--setup` function
+all fetures and things that might be tradationaly be added as a .py or bash script too the project (EG: automated setup) will be built into the program and only accsesed when you specify unless needed by the program
